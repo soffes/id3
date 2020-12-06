@@ -1,7 +1,8 @@
-/// ID3v2.4.0 Tag
+/// ID3 Tag for versions 2.3.0 and 2.4.0
 ///
+/// https://id3.org/id3v2.3.0
 /// https://id3.org/id3v2.4.0-frames
-public enum ID3v2_4Tag: String {
+public enum ID3Tag: String {
     /// 4.19  AENC Audio encryption
     case audioEncryption = "AENC"
 
@@ -78,7 +79,7 @@ public enum ID3v2_4Tag: String {
     case synchronizedTempCodes = "SYTC"
 
     /// 4.2.1 TALB Album/Movie/Show title
-    case albumTitle = "TALB"
+    case album = "TALB"
 
     /// 4.2.3 TBPM BPM (beats per minute)
     case beatsPerMinute = "TBPM"
@@ -250,4 +251,53 @@ public enum ID3v2_4Tag: String {
 
     /// 4.3.2 WXXX User defined URL link frame
     case userDefinedURLLinkFrame = "WXXX"
+
+    // MARK: - v2.3.0 Tags Deprecated in v2.4.0
+
+    /// 4.13 EQUA Equalization
+    ///
+    /// This frame is replaced by the EQU2 frame, 'Equalisation (2)'
+    case equalizationDeprecated = "EQUA"
+
+    /// 4.4 IPLS Involved people list
+    ///
+    /// This frame is replaced by the two frames TMCL, 'Musician credits
+    case involvedPeopleListDeprecated = "IPLS"
+
+    /// 4.12 RVAD Relative volume adjustment
+    ///
+    /// This frame is replaced by the RVA2 frame, 'Relative volume adjustment (2)'
+    case relativeVolumeAdjustmentDeprecated = "RVAD"
+
+    /// 4.2.1 TDAT  Date
+    ///
+    ///  This frame is replaced by the TDRC frame, 'Recording time'
+    case date = "TDAT"
+
+    /// 4.2.1 TIME  Time
+    ///
+    /// This frame is replaced by the TDRC frame, 'Recording time'
+    case time = "TIME"
+
+    /// 4.2.1 TORY  Original release year
+    ///
+    /// This frame is replaced by the TDOR frame, 'Original release time'
+    case originalReleaseYear = "TORY"
+
+    /// 4.2.1 TRDA  Recording dates
+    ///
+    /// This frame is replaced by the TDRC frame, 'Recording time'
+    case recordingDate = "TRDA"
+
+    /// 4.2.1 TSIZ  Size
+    ///
+    /// The information contained in this frame is in the general case either trivial to calculate for the player or
+    /// impossible for the tagger to calculate. There is however no good use for such information. The frame is
+    /// therefore completely deprecated.
+    case size = "TSIZ"
+
+    /// 4.2.1 TYER  Year
+    ///
+    /// This frame is replaced by the TDRC frame, 'Recording time'
+    case TYER = "TYER"
 }

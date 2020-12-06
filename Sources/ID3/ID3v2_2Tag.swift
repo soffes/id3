@@ -1,4 +1,4 @@
-/// ID3v2.2 Tag
+/// ID3 Tag for versions 2.2. This version of ID3 is deprecated but still found in the wild.
 ///
 /// https://id3.org/id3v2-00
 public enum ID3v2_2Tag: String {
@@ -57,7 +57,7 @@ public enum ID3v2_2Tag: String {
     case synchronizedTempCodes = "STC"
 
     /// 4.2.1 TAL Album/Movie/Show title
-    case albumTitle = "TAL"
+    case album = "TAL"
 
     /// 4.2.1 TBP BPM (Beats Per Minute)
     case beatsPerMinute = "TBP"

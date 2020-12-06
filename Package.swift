@@ -5,10 +5,9 @@ import PackageDescription
 let package = Package(
     name: "ID3",
     products: [
-        .library(name: "ID3", targets: ["ID3"]),
+        .library(name: "ID3", targets: ["ID3"])
     ],
     targets: [
-        .target(name: "ID3"),
-        .testTarget(name: "ID3Tests", dependencies: ["ID3"]),
+        .target(name: "ID3")
     ]
 )
