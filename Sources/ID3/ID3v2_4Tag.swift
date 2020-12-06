@@ -1,4 +1,7 @@
-public enum ID3v2Tag: String {
+/// ID3v2.4.0 Tag
+///
+/// https://id3.org/id3v2.4.0-frames
+public enum ID3v2_4Tag: String {
     /// 4.19  AENC Audio encryption
     case audioEncryption = "AENC"
 
@@ -18,7 +21,7 @@ public enum ID3v2Tag: String {
     case encryptionMethodRegistration = "ENCR"
 
     /// 4.12  EQU2 Equalisation (2)
-    case equalisation = "EQU2"
+    case equalization = "EQU2"
 
     /// 4.5   ETCO Event timing codes
     case eventTimingCodes = "ETCO"
@@ -69,10 +72,10 @@ public enum ID3v2Tag: String {
     case signatureFrame = "SIGN"
 
     /// 4.9   SYLT Synchronised lyric/text
-    case synchronisedLyric = "SYLT"
+    case synchronizedLyrics = "SYLT"
 
     /// 4.7   SYTC Synchronised tempo codes
-    case synchronisedTempCodes = "SYTC"
+    case synchronizedTempCodes = "SYTC"
 
     /// 4.2.1 TALB Album/Movie/Show title
     case albumTitle = "TALB"
@@ -153,7 +156,7 @@ public enum ID3v2Tag: String {
     case originalFilename = "TOFN"
 
     /// 4.2.2 TOLY Original lyricist(s)/text writer(s)
-    case originalLyricistWriters = "TOLY"
+    case originalLyricist = "TOLY"
 
     /// 4.2.2 TOPE Original artist(s)/performer(s)
     case originalArtist = "TOPE"
@@ -218,8 +221,8 @@ public enum ID3v2Tag: String {
     /// 4.22  USER Terms of use
     case termsOfUser = "USER"
 
-    /// 4.8   USLT Unsynchronised lyric/text transcription
-    case unsynchronisedLyrics = "USLT"
+    /// 4.8   USLT Unsynchronized lyric/text transcription
+    case unsynchronizedLyrics = "USLT"
 
     /// 4.3.1 WCOM Commercial information
     case commercialInformation = "WCOM"
@@ -247,5 +250,4 @@ public enum ID3v2Tag: String {
 
     /// 4.3.2 WXXX User defined URL link frame
     case userDefinedURLLinkFrame = "WXXX"
-
 }
