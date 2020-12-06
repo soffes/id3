@@ -1,3 +1,3 @@
 # ID3
 
-A description of this package.
+Swift package defining ID3v2.4 and ID3v2.2 tags.
